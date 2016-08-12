@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>  
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    
+    <package name="test"  extends="struts-default">     	
+        <action name="mainmenu" class="com.owen.util.HelloWorld">  
+            <result name="success">/WEB-INF/jspage/MainMenu.jsp</result>  
+        </action>  
+    </package>  
+    
+    
+    <package name="test1"  extends="struts-default">     	
+        <action name="paint" class="com.owen.mongogo.Paint">  
+            <result name="success">/WEB-INF/jspage/paint.jsp</result>  
+        </action>  
+    </package> 
+    
+    
+    
+    <package name="menu" extends="struts-default">  
+    	<action name="menu" class="com.owen.menu.Menu">
+        	<result name="success">/WEB-INF/jspage/Menu.jsp</result>
+        </action>		
+    </package>
+
+    <package name="url"  extends="struts-default">  
+    	<action name="getUrlAndReturnPage" class="com.owen.showpage.GetUrlAndReturnPage" method="execute">
+        	<result name="success">/WEB-INF/jspage/Show.jsp</result>
+        </action>		
+    </package>
+    
+
+    
+</struts> 
